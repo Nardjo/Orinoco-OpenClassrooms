@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://kit.fontawesome.com/7d17636476.js"></script>
+    <script src="../js/index.js"></script>
 
-    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
     <title>Orinoco</title>
   </head>
@@ -19,7 +20,7 @@
         <a href="/index.html"
           ><img
             class="logo-img"
-            src="../../assets/img/logo.png"
+            src="../assets/img/logo.png"
             alt="logo-site"
         /></a>
       </section>
@@ -34,20 +35,23 @@
 
     <!-- Start MAIN -->
     <main>
-      <section class="all-products">
-        <!-- title -->
-        <h1 class="all-products__title">Ours en peluche faits à la main</h1>
-        <!-- article -->
-        <article class="all-products__title__product">
-          <a class="all-products__title__product__link" href="">
-            <figure>
-              <img src="" alt="" />
-              <figcaption>
-                <h2></h2>
-              </figcaption>
-            </figure>
-          </a>
-        </article>
+      <section class="all-products" id="container">
+        <ul id="listProducts">
+          <template id="templateProduct">
+          <li id="ElementProducts">
+            <a id="linkProduct" href="">
+              <figure>
+                <img id="imageProduct" src="" alt="" />
+                <figcaption>
+                  <h2 id="titleProduct"></h2>
+                </figcaption>
+              </figure>
+              <h3 id="priceProduct"></h3>
+              <p id="descriptionProduct"></p>
+            </a>
+          </li>
+        </template>
+        </ul>
       </section>
     </main>
     <!-- End HEADER -->
