@@ -1,7 +1,7 @@
 // récupération et affichage des produits
 
 // function main autocall
-(async function () {
+(async () => {
   const products = await getProducts();
   addProduct(products)
 })();
@@ -30,19 +30,19 @@ function addProduct(products) {
 //affichage des produits
 function displayProducts(product) {
 
-  //récupération du template html
-  const templateElt = document.getElementById("templateProduct");
+  //récupération du template html()
+  const templateElement = document.getElementById("templateProduct");
 
   // clonage du template
-  const cloneElt = document.importNode(templateElt.content, true);
+  const cloneElement = document.importNode(templateElement.content, true);
  
   //ajout des produits
-  cloneElt.getElementById("linkProduct").href = `/produit.html?id=${product.id}`
-  cloneElt.getElementById("imageProduct").src = product.imageUrl
-  cloneElt.getElementById("titleProduct").textContent = product.name
-  cloneElt.getElementById("descriptionProduct").textContent = product.description
-  cloneElt.getElementById("priceProduct").textContent = `${product.price /100}.00 €`
+  cloneElement.getElementById("linkProduct").href = `produit.html?id=${product._id}`
+  cloneElement.getElementById("imageProduct").src = product.imageUrl
+  cloneElement.getElementById("titleProduct").textContent = product.name
+  cloneElement.getElementById("descriptionProduct").textContent = product.description
+  cloneElement.getElementById("priceProduct").textContent = `${product.price /100}.00 €`
 
   //affichage du template
-  document.getElementById("container").appendChild(cloneElt)
+  document.getElementById("listProducts").appendChild(cloneElement)
 }

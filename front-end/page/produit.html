@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script src="https://kit.fontawesome.com/7d17636476.js"></script>
+  <script src="../js/produit.js"></script>
 
-  <link rel="stylesheet" href="../../css/style.css" />
+
+  <link rel="stylesheet" href="../css/style.css" />
 
   <title>Produit</title>
 </head>
@@ -18,7 +20,7 @@
   <header>
     <!-- logo -->
     <section class="logo">
-      <a href="/index.html"><img class="logo-img" src="../../assets/img/logo.png" alt="logo-site" /></a>
+      <a href="index.html"><img class="logo-img" src="../assets/img/logo.png" alt="logo-site" /></a>
     </section>
     <!-- panier -->
     <section>
@@ -31,26 +33,29 @@
 
   <!-- Start MAIN -->
   <main>
-    <section class="teddies">
+    <section id="container">
       <!-- title -->
-      <h1 class="teddies__title"></h1>
-      <article class="teddie__title__product">
-        <figure>
-          <img class="teddie__title__product__img" src="" alt="">
-          <figcaption>
-            <h2></h2>
-          </figcaption>
-        </figure>
-        <p></p>
-        <div></div>
-        <form action="">
-          <select name="color" id="color-teddies">
-            <option value=""></option>
-          </select>
-        </form>
-        <button>Ajouter au panier</button>
+        <article id="ElementProducts">
+          <a id="linkProduct" href="">
+            <figure>
+              <img id="imageEltProduct" src="" alt="" />
+              <figcaption>
+                <h2 id="titleEltProduct"></h2>
+              </figcaption>
+            </figure>
+            <h3 id="priceEltProduct"></h3>
+            <p id="descriptionEltProduct"></p>
+            <template id="colorEltProduct">
+            <form action="">
+              <select name="color">
+                <option value=""></option>
+              </select>
+            </form>
+          </template>
+            <button>Ajouter au panier</button>
       </article>
-    </section>
+    </a>
+  </section>
   </main>
   <!-- End HEADER -->
 
