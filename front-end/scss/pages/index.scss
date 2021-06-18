@@ -1,0 +1,38 @@
+#listProducts {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90rem;
+  height: auto;
+  border-radius: 0.5rem;
+  border-top-right-radius: 1rem;
+  padding: 0;
+}
+
+#elementProducts {
+  background-color: #efffc2;
+  display: flex;
+  width: 26rem;
+  height: 32rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  
+}
+
+#elementProducts a {
+    width: 25rem;
+}
+
+#imageProduct {
+  position: relative;
+  top: -0.5rem;
+  left: -2rem;
+  height: 20rem;
+  width: 25rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+#descriptionProduct {
+    word-wrap: break-word;
+}

@@ -8,7 +8,7 @@
 
 //récupération des produits
 function getProducts() {
-  return fetch("http://localhost:3000/api/teddies/")
+  return fetch("http://localhost:3000/api/cameras/")
     .then(function (jsonListProducts) {
       return jsonListProducts.json();
     })

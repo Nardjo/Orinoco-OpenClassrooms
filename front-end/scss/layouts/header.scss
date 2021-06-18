@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3e9f1;
+  border-radius: 0.5rem;
+  &__logo {
+    &__link {
+      &__img {
+        position: relative;
+        left: 1rem;
+        height: 4rem;
+        width: 12rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+  &__basket a {
+    position: relative;
+    top: 1.3rem;
+    left: -1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
