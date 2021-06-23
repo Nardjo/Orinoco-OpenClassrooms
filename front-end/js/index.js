@@ -1,11 +1,14 @@
 (async () => {
-    const products = await getProducts();
+  const products = await getProducts();
     addProduct(products)
 })();
   
   //récupération des produits
-  function getProducts() {
-    return fetch("http://localhost:3000/api/cameras/")
+function getProducts() {
+  // API
+  const url = "http://localhost:3000/api/cameras/"
+  // call de l'API
+    return fetch(url)
       .then(function (jsonListProducts) {
         return jsonListProducts.json();
       })
@@ -42,5 +45,6 @@
   
     //affichage du template
     document.getElementById("listProducts").appendChild(cloneElement)
+    
   }
   

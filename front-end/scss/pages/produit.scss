@@ -1,19 +1,86 @@
 #container {
-    display: flex;
-    justify-content: center;
-    background-color: #efffc2;
-    display: flex;
-    width: 30rem;
-    height: 40rem;
-    margin-right: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
 }
 
+#elementProduct {
+  background-color: #f3e9f1;
+  position: relative;
+  top: 2rem;
+  left: 1%;
+  width: 32rem;
+  border-radius: 0.5rem;
+}
 
 #imageEltProduct {
-    width: 25rem;
-    height: 25rem;
-    object-fit: cover;
+  position: relative;
+  left: -1.5rem;
+  width: 30rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+#titleEltProduct {
+    position: relative;
+    left: -1.5rem;
+}
+
+#priceEltProduct {
+    position: relative;
+    top: -2.8rem;
+    left: 25rem;
+}
+
+#descriptionEltProduct {
+    position: relative;
+    top: -2.5rem;
+    left: 1rem;
+    margin-bottom: 2rem;
+}
+
+#listLensesProduct {
+    position: relative;
+    top: -3rem;
+    left: 1rem;
+}
+
+#listLensesProduct label {
+   font-size: 1.7rem;
+}
+
+#listLensesProduct select {
+    position: relative;
+    left: 1rem;
+    width: 5rem;
+    height: 1.5rem;
     border-radius: 0.5rem;
+ }
+
+#listQuantityProduct {
+    position: relative;
+    top: -2.5rem;
+    left: 1rem;
+}
+
+#listQuantityProduct label {
+    font-size: 1.7rem;
+}
+
+#listQuantityProduct select {
+    position: relative;
+    left: 0.3rem;
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+ }
+
+#btnAddBasket {
+    position: relative;
+    top: -5.5rem;
+    left : 20rem;
 }

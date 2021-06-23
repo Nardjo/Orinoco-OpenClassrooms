@@ -13,7 +13,8 @@ function getProductId() {
 
 // récupération du produit grâce à l'id
 function getProductData(productId) {
-  return fetch(`http://localhost:3000/api/cameras/${productId}`)
+  const url = "http://localhost:3000/api/cameras/"
+  return fetch(url + `${productId}`)
     .then(function (jsonProduct) {
       return jsonProduct.json();
     })
