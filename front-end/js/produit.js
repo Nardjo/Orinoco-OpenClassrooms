@@ -37,3 +37,10 @@ function displayProduct(productData) {
     document.getElementById("lenseElt").appendChild(option);
   }
 }
+
+// ajout de l'évent clique sur le btn ajout aux paniers
+document.getElementById("addProductBasket").onclick = (event) => {
+  event.preventDefault()
+
+
+}

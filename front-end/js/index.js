@@ -25,7 +25,6 @@ function addProduct(products) {
   for (var product of products) {
     displayProducts(product)
   }
-
 }
 //affichage des produits
 function displayProducts(product) {
