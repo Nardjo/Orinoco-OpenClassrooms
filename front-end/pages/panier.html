@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://kit.fontawesome.com/7d17636476.js"></script>
-
     <link rel="stylesheet" href="../css/style.css" />
 
     <title>Panier</title>
@@ -29,52 +27,41 @@
       </section>
       <!-- panier -->
       <section class="header__basket">
-        <a href="panier.html">Panier</a>
+        <a id="basketPreview" href="panier.html">Panier <span id="nombreProduct"></span></a>
       </section>
     </header>
     <!-- End HEADER -->
 
     <!-- Start MAIN -->
     <main>
-
       <!-- ORDER SUMMARY -->
-      <section class="order-summary">
-        <h2 class="order-summary__title">Votre panier</h2>
-        <table class="order-summary__table">
-          <thead>
+      <section>
+        <h2>Votre carte</h2>
+
+        <table>
             <tr>
-              <th id="product">Produit</th>
-              <th id="quantity">Quantité</th>
-              <th id="price">Prix</th>
-              <th id="total">Total</th>
+              <th>Produit</th>
+              <th>lentille</th>
+              <th>Quantité</th>
+              <th>Prix</th>
             </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id="productName"></td>
-              <td id="quantityProduct">
-                <select quantity-productid="quantityProductSelect" name="quantity" id="quantity">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                </select>
-                </form>
-              </td>
-              <td id="priceProduct"></td>
-              <td id="totalPriceProduct"></td>
-            </tr>
-            <tr>
-              <td id="allTotalPriceProduct"></td>
-            </tr>
+          <tbody id="productsList">
+            <template id="productTemplate">
+              <tr>
+                <td id="productName"></td>
+                <td id="productLenses"></td>
+                <td id="productQuantity"></td>
+                <td id="productPrice"></td>
+              </tr>
+            </template>
+            <table>
+              <tr>
+                <th>Total</th>
+                <td id="productTotalPrice"></td>
+              </tr>
+            </table>
+    
+            <button id="deleteBasket">Delete</button>
           </tbody>
         </table>
       </section>
@@ -124,4 +111,8 @@
     <!-- End FOOTER -->
   </body>
 
+  <script src="https://kit.fontawesome.com/7d17636476.js"></script>
+  <script src="../js/produit.js"></script>
+  <script src="../js/class.product.js"></script>
+  <script src="../js/panier.js"></script>
 </html>

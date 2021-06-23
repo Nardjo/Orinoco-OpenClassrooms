@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://kit.fontawesome.com/7d17636476.js"></script>
-    <script src="../js/produit.js"></script>
-
     <link rel="stylesheet" href="../css/style.css" />
 
     <title>Produit</title>
@@ -27,7 +24,7 @@
       </section>
       <!-- panier -->
       <section class="header__basket">
-        <a href="panier.html">Panier</a>
+        <a id="basketPreview" href="panier.html">Panier <span id="nombreProduct"></span></a>
       </section>
     </header>
     <!-- End HEADER -->
@@ -46,10 +43,26 @@
           <p id="descriptionEltProduct"></p>
           <div class="listLensesProduct">
               <label for="lenses">Choississez votre lentille:</label>
-              <select name="" id="lenseElt">
-              </select>
+              <select name="lenses" id="lenseElt"></select>
           </div>
-          <button id="addProductBasket">Ajouter au panier</button>
+          <div class="listQuantityProduct">
+            <label for="quantity">Quantité</label>
+            <select name="quantity" id="quantityElt">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select> 
+          </div>
+          <button id="btnAddBasket">Ajouter au panier</button>
         </article>
       </section>
     </main>
@@ -63,4 +76,9 @@
     </footer>
     <!-- End FOOTER -->
   </body>
+
+  <script src="https://kit.fontawesome.com/7d17636476.js"></script>
+  <script src="../js/produit.js"></script>
+  <script src="../js/class.product.js"></script>
+  <script src="../js/panier.js"></script>
 </html>

@@ -1,7 +1,9 @@
 (async () => {
   const productId = getProductId();
   const productData = await getProductData(productId);
+  const urlApi = ""
   displayProduct(productData);
+  btnAddBasket(productData);
 })();
 
 // récupération de l'id du produit
@@ -15,8 +17,8 @@ function getProductData(productId) {
     .then(function (jsonProduct) {
       return jsonProduct.json();
     })
-    .then(function (productData) {
-      return productData;
+    .then(function (product) {
+      return product;
     })
     .catch(function (error) {
       alert(error);
@@ -27,20 +29,42 @@ function getProductData(productId) {
 function displayProduct(productData) {
   document.getElementById("imageEltProduct").src = productData.imageUrl;
   document.getElementById("titleEltProduct").textContent = productData.name;
-  document.getElementById("priceEltProduct").textContent = `${productData.price / 100}.00 €`;
-  document.getElementById("descriptionEltProduct").textContent = productData.description;
+  document.getElementById("priceEltProduct").textContent = `${
+    productData.price / 100
+  }.00 €`;
+  document.getElementById("descriptionEltProduct").textContent =
+    productData.description;
 
   // affiche le choix des lentilles
-  for (i = 0; i < productData.lenses.length; i++) {
+  for (let lenses of productData.lenses) {
     let option = document.createElement("option");
-    option.textContent = productData.lenses[i];
+    option.textContent = lenses;
     document.getElementById("lenseElt").appendChild(option);
   }
 }
 
-// ajout de l'évent clique sur le btn ajout aux paniers
-document.getElementById("addProductBasket").onclick = (event) => {
-  event.preventDefault()
+//ajout des produits au panier
+function btnAddBasket(productData) {
+  document.getElementById("btnAddBasket").onclick = (event) => {
+    event.preventDefault();
+    window.location.reload();
+    let basketContent = JSON.parse(localStorage.getItem("basketContent"));
+    let selectedLenses = document.getElementById("lenseElt").value;
+    let selectedQuantity = document.getElementById("quantityElt").value;
 
+    if (basketContent === null) {
+      basketContent = [];
+    }
 
+    let productObj = new Product(
+      productData.name,
+      productData.price,
+      selectedLenses,
+      selectedQuantity
+    );
+    basketContent.push(productObj);
+    let basketJsoned = JSON.stringify(basketContent);
+    localStorage.setItem("basketContent", basketJsoned);
+    console.log(JSON.parse(localStorage.getItem("basketContent")));
+  };
 }
