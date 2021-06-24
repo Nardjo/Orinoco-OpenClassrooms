@@ -1,20 +1,22 @@
 let basketContent = JSON.parse(localStorage.getItem("basketContent"));
 let total = 0;
 
-
-document.getElementById("nombreProduct").textContent ="(" + basketContent.length + ")"
-
+document.getElementById("nombreProduct").textContent =
+  "(" + basketContent.length + ")";
+  
 //suppression du panier
-function suppressionArticle() {
+function deleteProduct() {
   localStorage.clear();
   window.location.reload();
 }
 
-// écoute de l'event clique sur le bouton delete
-document.getElementById("deleteBasket").onclick = (event) => {
+document.getElementById('btnDelete').onclick = (event) => {
   event.preventDefault();
-  suppressionArticle();
-};
+  deleteProduct();
+}
+
+
+  
 
 // affichage du panier dans le tableau
 basketContent.forEach((product) => {
@@ -36,7 +38,5 @@ basketContent.forEach((product) => {
   document.getElementById("productsList").appendChild(cloneElement);
 
   document.getElementById("productTotalPrice").textContent = `${(total +=
-      product.price / 100)}.00€`;
+    product.price / 100)}.00€`;
 });
-
-

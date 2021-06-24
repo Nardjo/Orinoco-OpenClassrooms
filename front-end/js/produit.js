@@ -1,7 +1,6 @@
 (async () => {
   const productId = getProductId();
   const productData = await getProductData(productId);
-  const urlApi = ""
   displayProduct(productData);
   btnAddBasket(productData);
 })();
@@ -49,6 +48,7 @@ function btnAddBasket(productData) {
   document.getElementById("btnAddBasket").onclick = (event) => {
     event.preventDefault();
     window.location.reload();
+  
     let basketContent = JSON.parse(localStorage.getItem("basketContent"));
     let selectedLenses = document.getElementById("lenseElt").value;
     let selectedQuantity = document.getElementById("quantityElt").value;
@@ -58,6 +58,7 @@ function btnAddBasket(productData) {
     }
 
     let productObj = new Product(
+      productData._id,
       productData.name,
       productData.price,
       selectedLenses,

@@ -1,12 +1,57 @@
-table {
-    table-layout: auto;
-    width: 100%;
-    border: solid;
-    margin-bottom: 0.5rem;;
+h2 {
+  text-align: center;
+}
+#mainTable {
+  table-layout: auto;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-#total tr {
-position: relative;
-left: -10rem;
-width: 5rem;
+#mainTable th {
+  border-bottom: 1px solid;
+  border-right: 1px solid;
 }
+
+#mainTable td {
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+#tableTotal tr {
+  position: relative;
+  left: 79em;
+  width: 5rem;
+}
+
+#tableTotal th {
+  font-size: 1.5rem;
+}
+
+#btnDelete {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top : -1rem;
+  left: 20rem;
+  width: 20rem;
+  height: 1.5rem;
+  text-align: center;
+}
+
+#btnValide {
+  background-color: green;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  top : -1rem;
+  left: 25rem;
+  width: 20rem;
+  height: 1.5rem;
+  text-align: center;
+}
+

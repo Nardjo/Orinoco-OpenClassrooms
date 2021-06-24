@@ -38,35 +38,37 @@
       <section>
         <h2>Votre panier</h2>
 
-        <table>
+        <table id="mainTable">
             <tr>
               <th>Produit</th>
               <th>lentille</th>
               <th>Quantité</th>
-              <th>Prix</th>
+              <th>Prix</th>  
             </tr>
           <tbody id="productsList">
             <template id="productTemplate">
-              <tr>
+              <tr id=productElt>
                 <td id="productName"></td>
                 <td id="productLenses"></td>
                 <td id="productQuantity"></td>
                 <td id="productPrice"></td>
               </tr>
             </template>
-            <table id="total">
+            <table id="tableTotal">
               <tr>
                 <th>Total</th>
                 <td id="productTotalPrice"></td>
               </tr>
             </table>
-            <button id="deleteBasket">Delete</button>
           </tbody>
         </table>
+        <button id="btnDelete">Supprimer le panier</button>
+        <button id="btnValide">Valider</button>
       </section>
 
       <!-- ORDER PURCHASE -->
       <section class="order-purchase">
+        <template>
         <h2 class="order-purchase__title">Passer commande</h2>
 
         <form action="" class="order-purchase__form">
@@ -98,6 +100,7 @@
           <button id="commander" type="submit" name="commander">Commander</button>
           </form>
       </section>
+    </template>
     </main>
     <!-- End HEADER -->
 
