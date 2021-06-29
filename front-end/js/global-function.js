@@ -1,4 +1,3 @@
-
 let basketContent = JSON.parse(localStorage.getItem("cameras")) || [];
 // preview du panier dans la nav
 function basketPreview() {
