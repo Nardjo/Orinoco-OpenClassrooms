@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>Panier</title>
   </head>
@@ -21,7 +21,7 @@
         <a class="header__logo__link" href="index.html"
           ><img
             class="header__logo__link__img"
-            src="../assets/img/logo.png"
+            src ="assets/img/logo.png"
             alt="logo-site"
         /></a>
       </section>
@@ -44,6 +44,7 @@
               <th>lentille</th>
               <th>Quantité</th>
               <th>Prix</th>  
+              <th>Supprimer</th>
             </tr>
           <tbody id="productsList">
             <template id="productTemplate">
@@ -52,6 +53,7 @@
                 <td id="productLenses"></td>
                 <td id="productQuantity"></td>
                 <td id="productPrice"></td>
+                <td><button class="btnDeleteElt">X</button></td>
               </tr>
             </template>
             <table id="tableTotal">
@@ -61,46 +63,45 @@
               </tr>
             </table>
           </tbody>
+          <button id="btnDelete">Suprimer le panier</button>
         </table>
-        <button id="btnDelete">Supprimer le panier</button>
-        <button id="btnValide">Valider</button>
       </section>
 
       <!-- ORDER PURCHASE -->
-      <section class="order-purchase">
-        <template>
+      <section id="order-purchase">
         <h2 class="order-purchase__title">Passer commande</h2>
 
-        <form action="" class="order-purchase__form">
+        <form id="contactBloc" action="commande.html" method="post" class="order-purchase__form">
           <!-- FIRSTNAME -->
           <label for="firstname">Prénom</label>
-          <input type="text" name="firstname" id="firstname" class="input" required>
+          <input type="text" name="firstName" id="firstName" class="input" 
+          pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
 
           <!-- LASTNAME -->
           <label for="lastname" class="label">Nom</label>
-          <input type="text" name="lastname" id="lastname" class="label" required>
+          <input type="text" name="lastName" id="lastName" class="label" 
+          pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
 
           <!-- EMAIL -->
           <label for="email" class="label">Adresse e-mail</label>
-          <input type="email" name="email" id="email" class="input" required>
+          <input type="email" name="email" id="email" class="input" 
+          pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$" required>
 
           <!-- ADRESS -->
           <label for="adress" class="label">Adresse</label>
-          <input type="text" name="adress" id="adress" class="input" required>
-
-          <!-- ZIPCODE -->
-          <label for="zipcode" class="label">Code postal</label>
-          <input type="text" name="zipcode" id="zipcode" class="input" required />
+          <input type="text" name="address" id="address" class="input" 
+          pattern="^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$" required>
 
           <!-- CITY -->
           <label for="city" class="label">Ville</label>
-          <input type="text" name="city" id="city" class="input" required />
+          <input type="text" name="city" id="city" class="input" 
+          pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$" required />
+
 
           <!-- SUBMIT -->
-          <button id="commander" type="submit" name="commander">Commander</button>
+          <button id="confirmPurchase" type="submit" name="commander">Commander</button>
           </form>
       </section>
-    </template>
     </main>
     <!-- End HEADER -->
 
@@ -113,8 +114,7 @@
     <!-- End FOOTER -->
   </body>
 
-  <script src="https://kit.fontawesome.com/7d17636476.js"></script>
-  <script src="../js/produit.js"></script>
-  <script src="../js/class.product.js"></script>
-  <script src="../js/panier.js"></script>
+  <script src="js/pages/panier.js"></script>
+  <script src="js/global-function.js"></script>
+  <script src="js/pages/commande.js"></script>
 </html>

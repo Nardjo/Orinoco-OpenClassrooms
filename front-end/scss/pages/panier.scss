@@ -31,27 +31,23 @@ h2 {
   font-size: 1.5rem;
 }
 
+.btnDeleteElt {
+  background-color: red;
+  color: white;
+  border-radius: 0.5rem;
+
+}
+
 #btnDelete {
   background-color: red;
   color: white;
-  font-weight: bold;
-  position: relative;
-  top : -1rem;
-  left: 20rem;
-  width: 20rem;
-  height: 1.5rem;
-  text-align: center;
+  border-radius: 0.5rem;
 }
 
-#btnValide {
+#confirmPurchase {
   background-color: green;
-  font-weight: bold;
   color: white;
-  position: relative;
-  top : -1rem;
-  left: 25rem;
-  width: 20rem;
-  height: 1.5rem;
-  text-align: center;
 }
+
+
 
