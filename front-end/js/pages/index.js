@@ -1,6 +1,5 @@
 (async () => {
   const products = await getProducts();
-  basketPreview();
   addProduct(products);
 })();
 

@@ -1,7 +1,6 @@
 (async () => {
   const productId = getProductId();
   const productData = await getProductData(productId);
-  basketPreview();
   displayProduct(productData);
   btnAddBasket(productData);
 })();

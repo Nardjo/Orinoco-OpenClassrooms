@@ -11,6 +11,7 @@ function basketPreview() {
         "(" + `${calculBasketPreview}` + ")";
     }
 }
+basketPreview();
 // add produits au paniers
 function displayProduct(productData) {
     document.getElementById("imageEltProduct").src = productData.imageUrl;

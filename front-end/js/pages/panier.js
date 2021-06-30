@@ -18,16 +18,6 @@ function basketPreview() {
 //appel de la fonction basketPreview
 basketPreview();
 
-//suppression de tout le panier
-function deleteProduct() {
-  localStorage.clear();
-  window.location.reload();
-  document.getElementById("btnDelete").onclick = (event) => {
-    event.preventDefault();
-    deleteProduct();
-  };
-}
-
 // affichage du panier dans le tableau
 basketContent.forEach((product) => {
   //récupération du template html
@@ -50,17 +40,25 @@ basketContent.forEach((product) => {
   document.getElementById("productTotalPrice").textContent = `${(total +=
     product.price / 100)}.00€`;
 
+  //suppression de tout le panier
+  function deleteProduct() {
+    localStorage.clear();
+    window.location.reload();
+    document.getElementById("btnDelete").onclick = (event) => {
+      event.preventDefault();
+      deleteProduct();
+    };
+  }
+
+  // supprimer un produit
   let btnDeleteElt = document.querySelectorAll(".btnDeleteElt");
 
   for (let i = 0; i < btnDeleteElt.length; i++) {
-    btnDeleteElt[i].addEventListener("click", (event) => {
-      event.preventDefault();
-
-      let idSelectorDelete = basketContent[i].id;
-      basketContent = basketContent.filter((el) => el.id !== idSelectorDelete);
+    btnDeleteElt[i].onclick = (event) => {
+      basketContent.splice(i, 1);
       localStorage.setItem("cameras", JSON.stringify(basketContent));
       window.location.reload();
-    });
+    };
   }
 });
 
@@ -82,7 +80,7 @@ document.getElementById("confirmPurchase").onclick = (event) => {
     city: document.getElementById("city").value,
     email: document.getElementById("email").value,
   };
-  
+
   // on valide que le formulaire soit correctement rempli
   if (
     (regexMail.test(contact.email) == true) &
@@ -108,8 +106,12 @@ document.getElementById("confirmPurchase").onclick = (event) => {
         localStorage.setItem("order", JSON.stringify(data));
         window.location.href = "commande.html";
       })
-      .catch((error) => alert("Un des champ du formulaire n'est pas correct !"));
+      .catch((error) =>
+        alert("Un des champ du formulaire n'est pas correct !")
+      );
   } else {
-    alert("Veuillez correctement renseigner l'entièreté du formulaire pour valider votre commande.");
+    alert(
+      "Veuillez correctement renseigner l'entièreté du formulaire pour valider votre commande."
+    );
   }
 };
