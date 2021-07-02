@@ -1,20 +1,3 @@
-//affichage du panier dans la nav
-let total = 0;
-let basketContent = JSON.parse(localStorage.getItem("cameras")) || [];
-
-// preview du panier dans la nav
-function basketPreview() {
-  if (basketContent.length == 0) {
-  } else {
-    let calculBasketPreview = 0;
-    for (var product of basketContent) {
-      calculBasketPreview += product.quantity;
-    }
-    document.getElementById("nombreProduct").textContent =
-      "(" + `${calculBasketPreview}` + ")";
-  }
-}
-
 //appel de la fonction basketPreview
 basketPreview();
 
@@ -37,36 +20,29 @@ basketContent.forEach((product) => {
   //affichage du template
   document.getElementById("productsList").appendChild(cloneElement);
 
+  //initialisation de total
+  let total = 0;
+  //calcul et affichage du total
   document.getElementById("productTotalPrice").textContent = `${(total +=
     product.price / 100)}.00€`;
-
-  //suppression de tout le panier
-  function deleteProduct() {
-    localStorage.clear();
-    window.location.reload();
-    document.getElementById("btnDelete").onclick = (event) => {
-      event.preventDefault();
-      deleteProduct();
-    };
-  }
-
-  // supprimer un produit
-  let btnDeleteElt = document.querySelectorAll(".btnDeleteElt");
-
-  for (let i = 0; i < btnDeleteElt.length; i++) {
-    btnDeleteElt[i].onclick = (event) => {
-      basketContent.splice(i, 1);
-      localStorage.setItem("cameras", JSON.stringify(basketContent));
-      window.location.reload();
-    };
-  }
 });
+
+// supprimer un produit
+let btnDeleteElt = document.querySelectorAll(".btnDeleteElt");
+
+for (let i = 0; i < btnDeleteElt.length; i++) {
+  btnDeleteElt[i].onclick = (event) => {
+    event.preventDefault();
+    basketContent.splice(i, 1);
+    localStorage.setItem("cameras", JSON.stringify(basketContent));
+    window.location.reload();
+  };
+}
 
 // ////////////////////////// Validation du formulaire et envoie en POST //////////////////////////
 
 const regexName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
-const regexCity =
-  /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
+const regexCity =/^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
 const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
 const regexAddress = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
 
@@ -96,7 +72,7 @@ document.getElementById("confirmPurchase").onclick = (event) => {
     }
     localStorage.clear();
     // on envoie en POST
-    fetch("http://localhost:3000/api/cameras/order", {
+    fetch(url + "/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ contact, products }),

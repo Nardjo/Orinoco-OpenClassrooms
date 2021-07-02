@@ -14,86 +14,83 @@
   </head>
 
   <body>
-    <!-- Start HEADER -->
-    <header class="header">
-      <!-- logo -->
-      <section class="headder__logo">
-        <a class="header__logo__link" href="index.html"
-          ><img
-            class="header__logo__link__img"
-            src ="assets/img/logo.png"
-            alt="logo-site"
-        /></a>
-      </section>
-      <!-- panier -->
-      <section class="header__basket">
-        <a id="basketPreview" href="panier.html">Panier <span id="nombreProduct"></span></a>
-      </section>
-    </header>
-    <!-- End HEADER -->
-
+       <!-- Start HEADER -->
+       <header class="header">
+        <!-- logo -->
+        <section class="headder__logo">
+          <a class="header__logo__link" href="index.html"
+            ><img
+              class="header__logo__link__img"
+              src="assets/img/orinoco.png"
+              alt="logo-site"
+          /></a>
+        </section>
+        <!-- panier -->
+        <section class="header__basket">
+          <a id="basketPreview" href="panier.html"><img src="assets/img/shopping-basket.png" alt="" srcset=""> <span id="nombreProduct"></span></a>
+        </section>
+      </header>
+   <!-- END HEADER -->
+   
     <!-- Start MAIN -->
-    <main>
+    <main id="mainBasket">
       <!-- ORDER SUMMARY -->
-      <section>
+      <section id="orderTab">
         <h2>Votre panier</h2>
 
         <table id="mainTable">
             <tr>
+              <th class="deleteItem">Supprimer</th>
               <th>Produit</th>
               <th>lentille</th>
               <th>Quantité</th>
               <th>Prix</th>  
-              <th>Supprimer</th>
             </tr>
           <tbody id="productsList">
             <template id="productTemplate">
               <tr id=productElt>
+                <td><button class="btnDeleteElt">X</button></td>
                 <td id="productName"></td>
                 <td id="productLenses"></td>
                 <td id="productQuantity"></td>
                 <td id="productPrice"></td>
-                <td><button class="btnDeleteElt">X</button></td>
               </tr>
             </template>
-            <table id="tableTotal">
-              <tr>
-                <th>Total</th>
-                <td id="productTotalPrice"></td>
-              </tr>
-            </table>
           </tbody>
-          <button id="btnDelete">Suprimer le panier</button>
+          <tr id="totalPrice">
+            <th>Total</th>
+            <td id="productTotalPrice"></tr>
+          </tr>
         </table>
       </section>
 
       <!-- ORDER PURCHASE -->
-      <section id="order-purchase">
+      <section id="orderPurchase">
         <h2 class="order-purchase__title">Passer commande</h2>
 
-        <form id="contactBloc" action="commande.html" method="post" class="order-purchase__form">
+        <form id="contactBloc" action="commande.html" method="post">
           <!-- FIRSTNAME -->
-          <label for="firstname">Prénom</label>
+          <label for="firstname" class="label">Prénom :</label>
           <input type="text" name="firstName" id="firstName" class="input" 
           pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
 
           <!-- LASTNAME -->
-          <label for="lastname" class="label">Nom</label>
-          <input type="text" name="lastName" id="lastName" class="label" 
+          <label for="lastname" class="label">Nom :</label>
+          <input type="text" name="lastName" id="lastName" class="input" 
           pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
 
           <!-- EMAIL -->
-          <label for="email" class="label">Adresse e-mail</label>
+          <label for="email" class="label">E-mail :</label>
           <input type="email" name="email" id="email" class="input" 
           pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$" required>
 
           <!-- ADRESS -->
-          <label for="adress" class="label">Adresse</label>
+          <label for="adress" class="label">Adresse :</label>
           <input type="text" name="address" id="address" class="input" 
           pattern="^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$" required>
 
           <!-- CITY -->
-          <label for="city" class="label">Ville</label>
+          <label for="city" class="label">Ville :</label>
           <input type="text" name="city" id="city" class="input" 
           pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$" required />
 
@@ -113,8 +110,7 @@
     </footer>
     <!-- End FOOTER -->
   </body>
-
+  <script src="js/global-function.js"></script>
   <script src="js/pages/panier.js"></script>
   <script src="js/global-function.js"></script>
-  <script src="js/pages/commande.js"></script>
 </html>

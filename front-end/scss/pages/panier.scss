@@ -1,53 +1,109 @@
+#mainBasket {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+  top: 0;
+}
+
+/* tableau de commande */
+
+#orderTab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin-bottom: 5rem;
+}
+
 h2 {
+  position: relative;
+  top: 0;
   text-align: center;
 }
+
 #mainTable {
-  table-layout: auto;
+  position: relative;
+  table-layout: fixed;
   text-align: center;
-  width: 100%;
-  border-top: 1px solid;
-  border-left: 1px solid;
+  width: 60rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
 }
 
 #mainTable th {
-  border-bottom: 1px solid;
-  border-right: 1px solid;
+  background-color: #b8cbd0;
+  height: 2rem;
 }
 
 #mainTable td {
-  border-bottom: 1px solid;
-  border-right: 1px solid;
+  background-color: #c9e3cc;
+  height: 2rem;
 }
 
-#tableTotal tr {
+.deleteItem {
+  width: 6rem;
+}
+#totalPrice {
   position: relative;
-  left: 79em;
-  width: 5rem;
+  left: 40.25rem;
+  border: 0px;
 }
 
-#tableTotal th {
-  font-size: 1.5rem;
+#totalPrice p {
+  position: relative;
 }
 
 .btnDeleteElt {
-  background-color: red;
+  background-color: rgb(162, 18, 18);
   color: white;
-  border-radius: 0.5rem;
-
+  border-radius: 0.2rem;
+  height: 1.5rem;
+  width: 2rem;
 }
 
 #btnDelete {
-  background-color: red;
-  color: white;
-  border-radius: 0.5rem;
+  position: relative;
+  top: 5rem;
+  left: 1rem;
+  border-radius: 0.2rem;
+  width: 10rem;
+  height: 1.5rem;
+}
+
+/* Formulaire de commande */
+#orderPurchase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactBloc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 2rem;
+}
+
+.label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: light;
+  font-size: 1.4rem;
+}
+
+.input {
+  height: 1.5rem;
+  width: 20rem;
+  font-size: 1.2rem;
+  font-weight: light;
 }
 
 #confirmPurchase {
-  background-color: green;
-  color: white;
+  position: relative;
+  top: 3rem;
+  left: 5.5rem;
+  height: 2rem;
+  width: 10rem;
+  background-color: rgb(213, 245, 186);
 }
-
-
-

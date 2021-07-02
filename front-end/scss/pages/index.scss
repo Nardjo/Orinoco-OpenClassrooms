@@ -1,3 +1,8 @@
+#containerMain {
+  display: flex;
+  justify-content: center;
+}
+
 #listProducts {
   display: flex;
   flex-flow: row wrap;
@@ -9,17 +14,13 @@
 }
 
 #elementProducts {
-  background-color: #f3e9f1;
-  display: flex;
-  width: 26rem;
+  background-color: #B8CBD0;
+  width: 27rem;
   height: 32rem;
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid;
   border-radius: 0.5rem;
-}
-
-#elementProducts a {
-    width: 25rem;
 }
 
 #imageProduct {
@@ -27,36 +28,45 @@
   top: -0.5rem;
   left: -2rem;
   height: 20rem;
-  width: 25rem;
+  width: 26rem;
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 #titleProduct {
-position: relative;
-left: -1.6rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  left: -1.5rem;
+  top: -1rem;
 }
 
 #priceProduct {
   position: relative;
-  top: -2.8rem;
-  left: 20rem
+  top: -3.7rem;
+  left: 21rem;  
 }
-
 #descriptionProduct {
   position: relative;
-  top: -2rem;
-  left: 1rem
+  top: -4rem;
+  left: 0.5rem;
+  word-break: normal;
 }
 
-#descriptionProduct {
-    word-wrap: break-word;
+#linkProduct {
+  position: relative;
+  top: -7rem;
+  left: 0;
+  
 }
 
-#btnAddBasket {
-  position: absolute;
-  top: 35rem;
-  left: 15rem;
-  width: 10rem;
-  height: 2rem;
+#linkProduct p {
+  text-decoration: none;
+  font-size: 4rem;
+  text-align: center;
+  color: #333533;
+}
+
+#linkProduct p:hover {
+  transform: scale(1.5);
 }

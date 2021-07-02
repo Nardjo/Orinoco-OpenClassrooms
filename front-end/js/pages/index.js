@@ -5,8 +5,6 @@
 
 //récupération des produits
 function getProducts() {
-  // API
-  const url = "http://localhost:3000/api/cameras/";
   // call de l'API
   return fetch(url)
     .then(function (jsonListProducts) {

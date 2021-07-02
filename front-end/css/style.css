@@ -6,14 +6,15 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #f3e9f1;
+  width: auto;
+  background-color: #C9E3CC;
   border-radius: 0.5rem;
 }
 .header__logo__link__img {
   position: relative;
-  left: 1rem;
-  height: 4rem;
-  width: 12rem;
+  left: -2rem;
+  height: 5rem;
+  width: 21rem;
   object-fit: cover;
   border-radius: 0.5rem;
 }
@@ -25,10 +26,22 @@
   font-size: 1.5rem;
 }
 
+#nombreProduct {
+  color: black;
+  font-size: 2rem;
+  position: relative;
+  top: -0.2rem;
+}
+
 .footer {
   display: flex;
   position: relative;
   top: 120rem;
+}
+
+#containerMain {
+  display: flex;
+  justify-content: center;
 }
 
 #listProducts {
@@ -42,17 +55,13 @@
 }
 
 #elementProducts {
-  background-color: #f3e9f1;
-  display: flex;
-  width: 26rem;
+  background-color: #B8CBD0;
+  width: 27rem;
   height: 32rem;
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid;
   border-radius: 0.5rem;
-}
-
-#elementProducts a {
-  width: 25rem;
 }
 
 #imageProduct {
@@ -60,111 +69,119 @@
   top: -0.5rem;
   left: -2rem;
   height: 20rem;
-  width: 25rem;
+  width: 26rem;
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 #titleProduct {
   position: relative;
-  left: -1.6rem;
+  display: flex;
+  justify-content: flex-start;
+  left: -1.5rem;
+  top: -1rem;
 }
 
 #priceProduct {
   position: relative;
-  top: -2.8rem;
-  left: 20rem;
+  top: -3.7rem;
+  left: 21rem;
 }
 
 #descriptionProduct {
   position: relative;
-  top: -2rem;
-  left: 1rem;
+  top: -4rem;
+  left: 0.5rem;
+  word-break: normal;
 }
 
-#descriptionProduct {
-  word-wrap: break-word;
+#linkProduct {
+  position: relative;
+  top: -7rem;
+  left: 0;
 }
 
-#btnAddBasket {
-  position: absolute;
-  top: 35rem;
-  left: 15rem;
-  width: 10rem;
-  height: 2rem;
+#linkProduct p {
+  text-decoration: none;
+  font-size: 4rem;
+  text-align: center;
+  color: #333533;
 }
 
-#container {
+#linkProduct p:hover {
+  transform: scale(1.5);
+}
+
+#mainProduct {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: auto;
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
+  width: 1440px;
+  height: 31rem;
+  margin: 0;
 }
 
 #elementProduct {
-  background-color: #f3e9f1;
+  position: absolute;
+  display: flex;
+  background-color: #b8cbd0;
   position: relative;
   top: 2rem;
-  left: 1%;
-  width: 32rem;
+  width: 83.2%;
+  height: 100%;
   border-radius: 0.5rem;
 }
 
 #imageEltProduct {
   position: relative;
-  left: -1.5rem;
-  width: 30rem;
-  height: 25rem;
+  top: 0;
+  left: 30rem;
+  width: 40rem;
+  height: 29rem;
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 #titleEltProduct {
   position: relative;
-  left: -1.5rem;
-}
-
-#priceEltProduct {
-  position: relative;
-  top: -2.8rem;
-  left: 25rem;
+  top: -30rem;
+  left: 65rem;
+  font-size: 2rem;
 }
 
 #descriptionEltProduct {
   position: relative;
-  top: -2.5rem;
-  left: 1rem;
-  margin-bottom: 2rem;
+  top: 5rem;
+  left: 21rem;
+  font-size: 1.5rem;
 }
 
 #listLensesProduct {
   position: relative;
-  top: -3rem;
-  left: 1rem;
+  width: 20rem;
+  top: 13rem;
+  left: -13rem;
 }
 
 #listLensesProduct label {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 #listLensesProduct select {
   position: relative;
-  left: 1rem;
-  width: 5rem;
-  height: 1.5rem;
+  margin-top: 0.5rem;
   border-radius: 0.5rem;
+  font-size: 1.2rem;
 }
 
 #listQuantityProduct {
   position: relative;
-  top: -2.5rem;
-  left: 1rem;
+  width: 20rem;
+  top: 13rem;
+  left: -5rem;
 }
 
 #listQuantityProduct label {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 #listQuantityProduct select {
@@ -172,64 +189,150 @@
   left: 0.3rem;
   width: 5rem;
   height: 1.5rem;
+  margin-top: 0.5rem;
   border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+#priceEltProduct {
+  position: relative;
+  width: 30rem;
+  top: 22rem;
+  left: 38rem;
+  font-size: 1.7rem;
 }
 
 #btnAddBasket {
   position: relative;
-  top: -5.5rem;
-  left: 20rem;
+  top: 22.5rem;
+  left: -10rem;
+  width: 30rem;
+  height: 5rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+#mainBasket {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+  top: 0;
+}
+
+/* tableau de commande */
+#orderTab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin-bottom: 5rem;
 }
 
 h2 {
+  position: relative;
+  top: 0;
   text-align: center;
 }
 
 #mainTable {
-  table-layout: auto;
+  position: relative;
+  table-layout: fixed;
   text-align: center;
-  width: 100%;
-  border-top: 1px solid;
-  border-left: 1px solid;
+  width: 60rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
 }
 
 #mainTable th {
-  border-bottom: 1px solid;
-  border-right: 1px solid;
+  background-color: #b8cbd0;
+  height: 2rem;
 }
 
 #mainTable td {
-  border-bottom: 1px solid;
-  border-right: 1px solid;
+  background-color: #c9e3cc;
+  height: 2rem;
 }
 
-#tableTotal tr {
+.deleteItem {
+  width: 6rem;
+}
+
+#totalPrice {
   position: relative;
-  left: 79em;
-  width: 5rem;
+  left: 40.25rem;
+  border: 0px;
 }
 
-#tableTotal th {
-  font-size: 1.5rem;
+#totalPrice p {
+  position: relative;
 }
 
 .btnDeleteElt {
-  background-color: red;
+  background-color: #a21212;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
+  height: 1.5rem;
+  width: 2rem;
 }
 
 #btnDelete {
-  background-color: red;
-  color: white;
-  border-radius: 0.5rem;
+  position: relative;
+  top: 5rem;
+  left: 1rem;
+  border-radius: 0.2rem;
+  width: 10rem;
+  height: 1.5rem;
+}
+
+/* Formulaire de commande */
+#orderPurchase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactBloc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 2rem;
+}
+
+.label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: light;
+  font-size: 1.4rem;
+}
+
+.input {
+  height: 1.5rem;
+  width: 20rem;
+  font-size: 1.2rem;
+  font-weight: light;
 }
 
 #confirmPurchase {
-  background-color: green;
-  color: white;
+  position: relative;
+  top: 3rem;
+  left: 5.5rem;
+  height: 2rem;
+  width: 10rem;
+  background-color: #d5f5ba;
+}
+
+#mainOrderStatus {
+  display: flex;
+  justify-content: center;
+}
+
+#contact {
+  font-size: 1.4rem;
+}
+
+#orderIdElt, #emailElt, #fullName, #addressElt, #cityElt {
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=style.css.map */

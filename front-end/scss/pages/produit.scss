@@ -1,86 +1,101 @@
-#container {
+#mainProduct {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: auto;
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
+  width: 1440px;
+  height: 31rem;
+  margin: 0;
 }
 
 #elementProduct {
-  background-color: #f3e9f1;
+  position: absolute;
+  display: flex;
+  background-color: #b8cbd0;
   position: relative;
   top: 2rem;
-  left: 1%;
-  width: 32rem;
+  width: 83.2%;
+  height: 100%;
   border-radius: 0.5rem;
 }
 
 #imageEltProduct {
   position: relative;
-  left: -1.5rem;
-  width: 30rem;
-  height: 25rem;
+  top: 0;
+  left: 30rem;
+  width: 40rem;
+  height: 29rem;
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 #titleEltProduct {
-    position: relative;
-    left: -1.5rem;
-}
-
-#priceEltProduct {
-    position: relative;
-    top: -2.8rem;
-    left: 25rem;
+  position: relative;
+  top: -30rem;
+  left: 65rem;
+  font-size: 2rem;
 }
 
 #descriptionEltProduct {
-    position: relative;
-    top: -2.5rem;
-    left: 1rem;
-    margin-bottom: 2rem;
+  position: relative;
+  top: 5rem;
+  left: 21rem;
+  font-size: 1.5rem;
 }
 
+
+
 #listLensesProduct {
-    position: relative;
-    top: -3rem;
-    left: 1rem;
+  position: relative;
+  width: 20rem;
+  top: 13rem;
+  left: -13rem;
 }
 
 #listLensesProduct label {
-   font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 #listLensesProduct select {
-    position: relative;
-    left: 1rem;
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 0.5rem;
- }
+  position: relative;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
 
 #listQuantityProduct {
-    position: relative;
-    top: -2.5rem;
-    left: 1rem;
+  position: relative;
+  width: 20rem;
+  top: 13rem;
+  left: -5rem;
 }
 
 #listQuantityProduct label {
-    font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 #listQuantityProduct select {
-    position: relative;
-    left: 0.3rem;
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 0.5rem;
- }
+  position: relative;
+  left: 0.3rem;
+  width: 5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+#priceEltProduct {
+  position: relative;
+  width: 30rem;
+  top: 22rem;
+  left: 38rem;
+  font-size: 1.7rem;
+}
 
 #btnAddBasket {
-    position: relative;
-    top: -5.5rem;
-    left : 20rem;
+  position: relative;
+  top: 22.5rem;
+  left: -10rem;
+  width: 30rem;
+  height: 5rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
 }

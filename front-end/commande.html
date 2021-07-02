@@ -13,36 +13,37 @@
   <title>Commande</title>
 </head>
 <body>
-   <!-- Start HEADER -->
-   <header class="header">
-    <!-- logo -->
-    <section class="headder__logo">
-      <a class="header__logo__link" href="index.html"
-        ><img
-          class="header__logo__link__img"
-          src ="assets/img/logo.png"
-          alt="logo-site"
-      /></a>
-    </section>
-    <!-- panier -->
-    <section class="header__basket">
-      <a id="basketPreview" href="panier.html">Panier <span id="nombreProduct"></span></a>
-    </section>
-  </header>
-  <!-- End HEADER -->
+         <!-- Start HEADER -->
+         <header class="header">
+          <!-- logo -->
+          <section class="headder__logo">
+            <a class="header__logo__link" href="index.html"
+              ><img
+                class="header__logo__link__img"
+                src="assets/img/orinoco.png"
+                alt="logo-site"
+            /></a>
+          </section>
+          <!-- panier -->
+          <section class="header__basket">
+            <a id="basketPreview" href="panier.html"><img src="assets/img/shopping-basket.png" alt="" srcset=""> <span id="nombreProduct"></span></a>
+          </section>
+        </header>
+     <!-- END HEADER -->
   
     <!-- Start MAIN -->
-    <main>
+    <main id="mainOrderStatus">
       <section id="contact">
-        <h1 class="order-status">Merci de votre commande</h1>
+        <h1 class="order-status">Merci de votre commande !</h1>
         <p><span id="firstNameElt"></span>, votre commande à été prise en compte.</p>
         <p>Elle porte la référence <span id="orderIdElt"></span>.</p>
         <p>Votre facture va vous être transmise par mail à : <span id="emailElt"></span></p>
         <div>
-        <p>Votre commande vous sera envoyez à l'adresse suivante :</p>
-        <p id="fullName"></p>
-        <p id="addressElt"></p>
-        <p id="cityElt"></p>
+        <p>Votre commande vous sera envoyez aux coordonnées suivantes :
+        <span id="fullName"></span>
+        <span id="addressElt"></span>
+        <span id="cityElt"></span>
+      </p>
       </div>
       </section>
       
