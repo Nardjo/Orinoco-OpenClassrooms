@@ -35,9 +35,9 @@
     <main id="mainBasket">
       <!-- ORDER SUMMARY -->
       <section id="orderTab">
-        <h2>Votre panier</h2>
-
+        <h2>Votre panier <span id="basketEmpty"></span></h2>
         <table id="mainTable">
+          <template id="productHeadList"> 
             <tr>
               <th class="delete">Supprimer</th>
               <th>Produit</th>
@@ -46,6 +46,7 @@
               <th>Prix unitaire</th>
               <th>Prix</th>  
             </tr>
+          </template>
           <tbody id="productsList">
             <template id="productTemplate">
               <tr id=productElt>
@@ -58,15 +59,18 @@
               </tr>
             </template>
           </tbody>
-          <tr id="totalPrice">
+          <tr id="totalPrice"></tr>
+          <template id="templateTotalPrice">
             <th>Total</th>
             <td id="productTotalPrice"></tr>
+            </template>
           </tr>
         </table>
       </section>
 
       <!-- ORDER PURCHASE -->
       <section id="orderPurchase">
+        <template id="templateForm">
         <h2 class="order-purchase__title">Passer commande</h2>
 
         <form id="contactBloc" action="commande.html" method="post">
@@ -99,6 +103,7 @@
           <!-- SUBMIT -->
           <button id="confirmPurchase" type="submit" name="commander">Commander</button>
           </form>
+        </template>
       </section>
     </main>
     <!-- End HEADER -->
