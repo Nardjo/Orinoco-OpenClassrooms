@@ -313,6 +313,10 @@ h2 {
   font-weight: light;
 }
 
+input:invalid {
+  background-color: red;
+}
+
 #confirmPurchase {
   position: relative;
   top: 3rem;
