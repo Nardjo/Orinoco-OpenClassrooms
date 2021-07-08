@@ -1,6 +1,6 @@
 # Projet 5 de la formation développeur web chez Openclassrooms.
 
-## Compétences évaluées
+### Compétences évaluées
 - Créer un plan de test pour une application
 - Interagir avec un web service avec JavaScript
 - Valider des données issues de sources externes
