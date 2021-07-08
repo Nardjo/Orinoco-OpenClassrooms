@@ -334,57 +334,12 @@ h2 {
   font-weight: bolder;
 }
 
-/* tableau de commande */
-#orderTab {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  margin-bottom: 5rem;
-}
-
-h2 {
-  position: relative;
-  top: 0;
-  text-align: center;
-}
-
-#mainTable {
-  position: relative;
-  table-layout: fixed;
-  text-align: center;
-  width: 60rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-#mainTable th {
+#returnIndex {
   background-color: #b8cbd0;
-  height: 2rem;
-}
-
-#mainTable td {
-  background-color: #c9e3cc;
-  height: 2rem;
-}
-
-#totalPrice {
-  position: relative;
-  left: 39.95rem;
-  border: 0px;
-}
-
-#totalPrice p {
-  position: relative;
-}
-
-#btnDelete {
-  position: relative;
-  top: 5rem;
-  left: 1rem;
+  width: 12rem;
+  height: 3rem;
   border-radius: 0.2rem;
-  width: 10rem;
-  height: 1.5rem;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
