@@ -117,6 +117,7 @@
   justify-content: center;
   width: 1440px;
   height: 31rem;
+  margin: 0;
 }
 
 #elementProduct {
@@ -330,61 +331,8 @@ h2 {
   font-size: 1.4rem;
 }
 
-#orderIdElt, #emailElt, #fullName, #addressElt, #cityElt, #totalPriceOrder {
+#orderIdElt, #emailElt, #fullName, #addressElt, #cityElt {
   font-weight: bolder;
-}
-
-/* tableau de commande */
-#orderTab {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  margin-bottom: 5rem;
-}
-
-h2 {
-  position: relative;
-  top: 0;
-  text-align: center;
-}
-
-#mainTable {
-  position: relative;
-  table-layout: fixed;
-  text-align: center;
-  width: 60rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-#mainTable th {
-  background-color: #b8cbd0;
-  height: 2rem;
-}
-
-#mainTable td {
-  background-color: #c9e3cc;
-  height: 2rem;
-}
-
-#totalPrice {
-  position: relative;
-  left: 39.95rem;
-  border: 0px;
-}
-
-#totalPrice p {
-  position: relative;
-}
-
-#btnDelete {
-  position: relative;
-  top: 5rem;
-  left: 1rem;
-  border-radius: 0.2rem;
-  width: 10rem;
-  height: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

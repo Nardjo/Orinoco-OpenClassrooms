@@ -1,3 +1,4 @@
+// Objet product 
 class Product {
     constructor(id, name, price, option, quantity) {
         this.id = id;

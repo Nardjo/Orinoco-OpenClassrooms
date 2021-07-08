@@ -1,8 +1,9 @@
 (async () => {
   const productId = getProductId();
   const productData = await getProductData(productId);
+  basketPreview();
   displayProduct(productData);
-  btnAddBasket(productData);
+  AddBasket(productData);
 })();
 
 // récupération de l'id du produit
@@ -13,18 +14,16 @@ function getProductId() {
 // récupération du produit grâce à l'id
 function getProductData(productId) {
   return fetch(url + `/${productId}`)
-    .then(function (jsonProduct) {
-      return jsonProduct.json();
-    })
-    .then(function (product) {
-      return product;
-    })
-    .catch(function (error) {
-      alert(error);
-    });
+  .then((httpResponse) => httpResponse.json())
+  .then((products) => products)
+  .catch((error) => {
+    alert(
+      "La connexion au serveur n'a pas pu être effectué."
+    )
+  })
 }
 
-// add produits au paniers
+// affichage du produit sur la page
 function displayProduct(productData) {
   document.getElementById("imageEltProduct").src = productData.imageUrl;
   document.getElementById("titleEltProduct").textContent = productData.name;
@@ -43,7 +42,7 @@ function displayProduct(productData) {
 }
 
 //ajout des produits au panier
-function btnAddBasket(productData) {
+function AddBasket(productData) {
   document.getElementById("btnAddBasket").onclick = (event) => {
       event.preventDefault();
       window.location.reload();
