@@ -2,7 +2,6 @@
 basketPreview();
 displayBasket();
 DeleteItemBasket();
-totalCalculPrice()
 
 
 // ////////////////////////// Affichage du Panier et function delete //////////////////////////
