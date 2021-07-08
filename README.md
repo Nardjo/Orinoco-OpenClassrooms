@@ -11,7 +11,7 @@ Pour faire fonctionner ce projet, vous avez besoin de Node et npm d'installés s
 
 ### Installation
 
-dans le terminal
+**Dans le terminal :**
 ```
 $ git clone https://github.com/JordBSN/Openclassrooms-projet-5-Orinoco.git 
 $ cd back-end
