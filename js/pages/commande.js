@@ -1,7 +1,5 @@
 let order = JSON.parse(localStorage.getItem("order")) || [];
 
-// call de la function calcul du total
-totalCalculPrice();
 
 // affiche Mes informations
 document.getElementById("firstNameElt").textContent = order.contact.firstName;
