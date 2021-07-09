@@ -14,13 +14,11 @@ function getProductId() {
 // récupération du produit grâce à l'id
 function getProductData(productId) {
   return fetch(url + `/${productId}`)
-  .then((httpResponse) => httpResponse.json())
-  .then((products) => products)
-  .catch((error) => {
-    alert(
-      "La connexion au serveur n'a pas pu être effectué."
-    )
-  })
+    .then((httpResponse) => httpResponse.json())
+    .then((products) => products)
+    .catch((error) => {
+      alert("La connexion au serveur n'a pas pu être effectué.");
+    });
 }
 
 // affichage du produit sur la page
@@ -44,45 +42,43 @@ function displayProduct(productData) {
 //ajout des produits au panier
 function AddBasket(productData) {
   document.getElementById("btnAddBasket").onclick = (event) => {
-      event.preventDefault();
-      window.location.reload();
-   
+    event.preventDefault();
+    window.location.reload();
 
-      let selectedLenses = (document.getElementById("lenseElt").value);
-      let selectedQuantity = parseInt(document.getElementById("quantityElt").value);
+    let selectedLenses = document.getElementById("lenseElt").value;
+    let selectedQuantity = parseInt(
+      document.getElementById("quantityElt").value
+    );
 
-      if (basketContent === null) {
-          basketContent = [];
+    if (basketContent === null) {
+      basketContent = [];
+    }
+
+    let item = new Product(
+      productData._id,
+      productData.name,
+      productData.price,
+      selectedLenses,
+      selectedQuantity
+    );
+
+    var isPresent = false;
+    var indexModif;
+    for (var basket of basketContent) {
+      switch (basket.option) {
+        case item.option:
+          isPresent = true;
+          indexModif = basketContent.indexOf(basket);
       }
+    }
 
-      let item = new Product(
-          productData._id,
-          productData.name,
-          productData.price,
-          selectedLenses,
-          selectedQuantity
-      );
-
-      var isPresent = false;
-      var indexModif;
-      for (var basket of basketContent) {
-          switch (basket.option) {
-              case item.option:
-                  isPresent = true;
-                  indexModif = basketContent.indexOf(basket)
-         
-          }
-      }
-
-      if (isPresent) {
-          basketContent[indexModif].quantity =
-              +basketContent[indexModif].quantity + +item.quantity;
-          localStorage.setItem("cameras", JSON.stringify(basketContent));
-      } else {
-          basketContent.push(item);
-          localStorage.setItem("cameras", JSON.stringify(basketContent));
-      }
-    
+    if (isPresent) {
+      basketContent[indexModif].quantity =
+        +basketContent[indexModif].quantity + +item.quantity;
+      localStorage.setItem("cameras", JSON.stringify(basketContent));
+    } else {
+      basketContent.push(item);
+      localStorage.setItem("cameras", JSON.stringify(basketContent));
+    }
   };
 }
-

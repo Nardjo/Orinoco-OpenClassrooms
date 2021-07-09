@@ -1,11 +1,11 @@
-//------------- CALL FUNCTIONS --------------
+// ////////////////////////// Call functions //////////////////////////
 basketPreview();
+totalCalculPrice();
 displayBasket();
 DeleteItemBasket();
-
+confirmOrder()
 
 // ////////////////////////// Affichage du Panier et function delete //////////////////////////
-
 //------------- Affichage du panier sous forme de tableau & active ou non le formulaire --------------
 function displayBasket() {
   if (basketContent == 0) {
@@ -63,7 +63,6 @@ function displayBasket() {
     });
   }
 }
-
 //------------- supprimer un produit  --------------
 function DeleteItemBasket() {
   let btnDeleteElt = document.querySelectorAll(".btnDeleteElt");
@@ -78,15 +77,7 @@ function DeleteItemBasket() {
   }
 }
 
-
 // ////////////////////////// Validation du formulaire et envoie en POST //////////////////////////
-
-// Event du click que le bouton de validation de la commande
-document.getElementById("confirmPurchase").onclick = (event) => {
-  event.preventDefault();
-  validForm();
-};
-
 // Function de validation et d'envoi du formulaire
 function validForm() {
   // Déclaration des const des regex
@@ -147,4 +138,11 @@ var products = []
         alert("Un des champ du formulaire n'est pas correct !")
       );
   }
+}
+// fuction click validation de la commande
+function confirmOrder() {
+  document.getElementById("confirmPurchase").onclick = (event) => {
+    event.preventDefault();
+    validForm();
+  };
 }

@@ -1,7 +1,9 @@
 let order = JSON.parse(localStorage.getItem("order")) || [];
+// call function total price
+totalCalculPrice();
 
 
-// affiche Mes informations
+// affiche les informations
 document.getElementById("firstNameElt").textContent = order.contact.firstName;
 document.getElementById("orderIdElt").textContent = order.orderId;
 document.getElementById("totalPriceOrder").textContent = total + "€";

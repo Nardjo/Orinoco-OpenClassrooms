@@ -1,53 +1,52 @@
 #mainProduct {
   display: flex;
-  justify-content: center;
   width: 1440px;
   height: 31rem;
-
 }
 
-#elementProduct {
-  position: absolute;
+#container {
+  position: relative;
   display: flex;
+  justify-content: center;
   background-color: #b8cbd0;
   position: relative;
-  top: 2rem;
-  width: 83.2%;
-  height: 100%;
   border-radius: 0.5rem;
+  width: 80rem;
+  height: 50rem;
+  top: 2rem;
+  left: 2rem;
 }
 
 #imageEltProduct {
   position: relative;
-  top: 0;
-  left: 30rem;
-  width: 40rem;
-  height: 29rem;
+  top: 2rem;
+  left: -1rem;
+  width: 70rem;
+  height: 30rem;
   object-fit: cover;
+  border: 1px solid;
   border-radius: 0.5rem;
 }
 
 #titleEltProduct {
   position: relative;
-  top: -30rem;
-  left: 65rem;
+  top: 0.5rem;
+  left: 0;
   font-size: 2rem;
 }
 
 #descriptionEltProduct {
   position: relative;
-  top: 5rem;
-  left: 21rem;
+  top: -3rem;
+  left: 0;
   font-size: 1.5rem;
 }
-
-
 
 #listLensesProduct {
   position: relative;
   width: 20rem;
-  top: 13rem;
-  left: -13rem;
+  top: -2rem;
+  left: 0;
 }
 
 #listLensesProduct label {
@@ -64,8 +63,8 @@
 #listQuantityProduct {
   position: relative;
   width: 20rem;
-  top: 13rem;
-  left: -5rem;
+  top: 0;
+  left: 0;
 }
 
 #listQuantityProduct label {
@@ -85,15 +84,15 @@
 #priceEltProduct {
   position: relative;
   width: 30rem;
-  top: 22rem;
-  left: 38rem;
+  top: 7rem;
+  left: 63rem;
   font-size: 1.7rem;
 }
 
 #btnAddBasket {
   position: relative;
-  top: 22.5rem;
-  left: -10rem;
+  top: -6rem;
+  left: 23rem;
   width: 30rem;
   height: 5rem;
   font-size: 1.7rem;
