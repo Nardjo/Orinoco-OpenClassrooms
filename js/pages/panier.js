@@ -100,7 +100,6 @@ function validForm() {
 var products = []
 // Add des produits au tableau products
   for (var itemProduct of basketContent) {
-    console.log(itemProduct)
     products.push(itemProduct.id)
   }
   
@@ -140,6 +139,8 @@ var products = []
   }
 }
 // fuction click validation de la commande
+
+
 function confirmOrder() {
   document.getElementById("confirmPurchase").onclick = (event) => {
     event.preventDefault();
