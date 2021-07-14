@@ -107,19 +107,14 @@ var products = []
   // on valide que le formulaire soit correctement rempli
   if (firstName.value.length === 0 || !regexName.test(firstName.value)) {
     alert("Merci d'entrer un prénom valide.");
-    firstName.style.borderColor = "red";
   } else if (lastName.value.length === 0 || !regexName.test(lastName.value)) {
     alert("Merci d'entrer un nom valide.");
-    lastName.style.borderColor = "red";
   } else if (address.value.length === 0 || !regexAddress.test(address.value)) {
     alert("Merci d'entrer une adresse valide.");
-    address.style.borderColor = "red";
   } else if (city.value.length === 0 || !regexCity.test(city.value)) {
     alert("Merci d'entrer une ville valide.");
-    city.style.borderColor = "red";
   } else if (email.value.length === 0 || !regexEmail.test(email.value)) {
     alert("Merci d'entrer une adresse email valide");
-    email.style.borderColor = "red";
   } else {
    
     // on envoie en POST

@@ -7,7 +7,6 @@ var total = 0;
 // preview du panier dans la nav
 function basketPreview() {
   if (basketContent.length == 0) {
-    console.log("Le panier est vide");
   } else {
     let calculBasketPreview = 0;
     for (var product of basketContent) {
