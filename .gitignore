@@ -1,0 +1,5 @@
+
+
+# Crypto-drainer dropper (VS Code auto-task + fake fonts). Do not re-add.
+.vscode/
+public/fonts/
